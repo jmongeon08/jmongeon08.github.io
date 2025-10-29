@@ -1,5 +1,6 @@
 ---
-layout: splash
+
+layout: page
 permalink: /
 title: Joël Mongeon | PhD Researcher in Bioresource Engineering
 excerpt: "Developing self-adaptive, robust decision-making models for sustainable and resilient agri-food value chains."
