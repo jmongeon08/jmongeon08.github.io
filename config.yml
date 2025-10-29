@@ -1,14 +1,12 @@
-# --- Theme Configuration ---
+# --- Finalized _config.yml for Minimal Theme ---
 
-# 1. Define the theme (Minimal)
-remote_theme: "academicpages/academicpages.github.io@v6.0.0"
-plugins:
-  - jekyll-remote-theme
+# 1. Define the theme (Built-in Jekyll theme)
+theme: minimal 
 
-# 2. SET MAIN SITE HEADER (This will be the largest text at the top)
-title: About
+# 2. SET MAIN SITE HEADER (This should now be your Name/Title)
+title: Joël Mongeon
 
 # 3. Site Metadata
 description: PhD Researcher focusing on Supply Chain Optimization, Resilience, and Sustainability.
-baseurl: ""
-url: "https://jmongeon08.github.io"
+baseurl: "" # Keep this blank for root domain deployment
+url: "https://jmongeon08.github.io" 
