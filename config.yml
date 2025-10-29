@@ -1,8 +1,9 @@
 # --- Theme Configuration for academicpages ---
 
-remote_theme: "academicpages/academicpages.github.io@v6.0.0"
-plugins:
-  - jekyll-remote-theme
+# _config.yml (Switching to the listed theme)
+theme: minimal
+# IMPORTANT: If you switch to a built-in theme like 'minimal', 
+# you likely need to REMOVE the 'remote_theme' line.
   
 # Optional: You can add site-specific variables here that the theme uses
 title: Joël Mongeon
