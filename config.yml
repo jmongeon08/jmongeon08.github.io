@@ -1,12 +1,76 @@
-# --- Finalized _config.yml for Minimal Theme ---
+# --- THEME REFERENCE (CRUCIAL) ---
+# This line is needed to load the visual theme and features.
+# If you were using academicpages before, use that line.
+remote_theme: "academicpages/academicpages.github.io@v6.0.0"
+plugins:
+  - jekyll-remote-theme
 
-# 1. Define the theme (Built-in Jekyll theme)
-theme: minimal 
+# --- BASIC SITE SETTINGS ---
+locale                   : "en-US"
+title                    : "Joël Mongeon"
+title_separator          : "-"
+name                     : &name "Joël Mongeon"
+description              : &description "PhD Researcher in Bioresource Engineering, McGill University"
+url                      : https://jmongeon08.github.io
+baseurl                  : ""
+repository               : "jmongeon08/jmongeon08.github.io"
 
-# 2. SET MAIN SITE HEADER (This should now be your Name/Title)
-title: Joël Mongeon
+# --- SITE AUTHOR (CONTROLS THE HEADER/SIDEBAR NAME) ---
+author:
+  # Biographic information
+  avatar           : # "profile2.jpg" - Path to your profile image
+  name             : "Joël Mongeon"
+  bio              : "<span style='color: #009999;'>PhD Researcher</span>"
+  location         : "Montreal, QC, Canada"
+  employer         : "McGill University"
+  email            : "joel.mongeon@mcgill.ca"
 
-# 3. Site Metadata
-description: PhD Researcher focusing on Supply Chain Optimization, Resilience, and Sustainability.
-baseurl: "" # Keep this blank for root domain deployment
-url: "https://jmongeon08.github.io" 
+  # Academic websites
+  googlescholar    : # Add your Google Scholar URL here
+  researchgate     : "https://www.researchgate.net/scientific-contributions/Joel-Mongeon-2294425778"
+  
+  # Repositories and software development
+  github           : "jmongeon08"
+
+  # Social media
+  linkedin         : joël-mongeon-393294195 # Use the ID part of your LinkedIn URL
+  twitter          : # Add your Twitter handle if you have one
+
+
+# --- COLLECTIONS (These enable the Publications/Talks tabs) ---
+collections:
+  teaching:
+    output: true
+    permalink: /:collection/:path/
+  publications:
+    output: true
+    permalink: /:collection/:path/
+  portfolio:
+    output: true
+    permalink: /:collection/:path/
+  talks:
+    output: true
+    permalink: /:collection/:path/
+
+
+# --- PLUGINS ---
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-remote-theme # Keep this for the remote theme
+
+# --- ARCHIVES ---
+# (These settings are standard for the theme)
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+
+# You can delete everything else below the ARCHIVES section if you want a clean file, 
+# as those are mostly standard Jekyll processing settings.
