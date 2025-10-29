@@ -63,7 +63,7 @@ Always keen to connect with fellow researchers working on **quantitative resilie
 
 | | |
 | :--- | :--- |
-| **Email:** | joel.mongeon@mcgill.ca |
+| **Email:** | joel.mongeon@mail.mcgill.ca |
 | **LinkedIn:** | [Joël Mongeon](https://www.linkedin.com/in/jo%C3%ABl-mongeon-393294195) |
 | **ResearchGate:** | [Joël Mongeon](https://www.researchgate.net/scientific-contributions/Joel-Mongeon-2294425778) |
 | **Academic Site:** | [jmongeon08.github.io](https://jmongeon08.github.io/) |
