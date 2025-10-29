@@ -67,5 +67,3 @@ Always keen to connect with fellow researchers working on **quantitative resilie
 | **LinkedIn:** | [Joël Mongeon](https://www.linkedin.com/in/jo%C3%ABl-mongeon-393294195) |
 | **ResearchGate:** | [Joël Mongeon](https://www.researchgate.net/scientific-contributions/Joel-Mongeon-2294425778) |
 | **Academic Site:** | [jmongeon08.github.io](https://jmongeon08.github.io/) |
-
-*(Note: For the theme to function, you must have the `_config.yml` file in the repository root and ensure your image path for `overlay_image` is correct, or delete that line.)*
