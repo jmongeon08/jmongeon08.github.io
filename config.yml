@@ -1,7 +1,7 @@
 # --- Theme Configuration for academicpages ---
 
 # _config.yml (Switching to the listed theme)
-theme: dinky
+theme: minimal
 # IMPORTANT: If you switch to a built-in theme like 'minimal', 
 # you likely need to REMOVE the 'remote_theme' line.
   
