@@ -1,12 +1,12 @@
-# --- Theme Configuration for academicpages ---
+# --- Theme Configuration ---
 
-# _config.yml (Switching to the listed theme)
+# 1. Define the theme (Minimal)
 theme: minimal
-# IMPORTANT: If you switch to a built-in theme like 'minimal', 
-# you likely need to REMOVE the 'remote_theme' line.
-  
-# Optional: You can add site-specific variables here that the theme uses
-title: Joël Mongeon
+
+# 2. SET MAIN SITE HEADER (This will be the largest text at the top)
+title: About
+
+# 3. Site Metadata
 description: PhD Researcher focusing on Supply Chain Optimization, Resilience, and Sustainability.
-baseurl: "" # Only change if you are NOT using the root domain (jmongeon08.github.io)
-url: "https://jmongeon08.github.io" # Update this to your actual URL
+baseurl: ""
+url: "https://jmongeon08.github.io"
