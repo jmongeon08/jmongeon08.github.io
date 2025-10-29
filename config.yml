@@ -1,7 +1,9 @@
 # --- Theme Configuration ---
 
 # 1. Define the theme (Minimal)
-theme: minimal
+remote_theme: "academicpages/academicpages.github.io@v6.0.0"
+plugins:
+  - jekyll-remote-theme
 
 # 2. SET MAIN SITE HEADER (This will be the largest text at the top)
 title: About
