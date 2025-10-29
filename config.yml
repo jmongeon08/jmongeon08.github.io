@@ -1,0 +1,11 @@
+# --- Theme Configuration for academicpages ---
+
+remote_theme: "academicpages/academicpages.github.io@v6.0.0"
+plugins:
+  - jekyll-remote-theme
+  
+# Optional: You can add site-specific variables here that the theme uses
+title: Joël Mongeon
+description: PhD Researcher focusing on Supply Chain Optimization, Resilience, and Sustainability.
+baseurl: "" # Only change if you are NOT using the root domain (jmongeon08.github.io)
+url: "https://jmongeon08.github.io" # Update this to your actual URL
