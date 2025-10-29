@@ -12,7 +12,7 @@ header:
     - label: "View Research Objectives"
       url: "/research/"
     - label: "Connect on LinkedIn"
-      url: "https://ca.linkedin.com/in/jo%C3%ABl-mongeon-393294195"
+      url: "https://www.linkedin.com/in/jo%C3%ABl-mongeon-393294195/"
 ---
 
 # Joël Mongeon | PhD Researcher in Bioresource Engineering 🔬
@@ -63,7 +63,7 @@ Always keen to connect with fellow researchers working on **quantitative resilie
 | | |
 | :--- | :--- |
 | **Email:** | joel.mongeon@mcgill.ca |
-| **LinkedIn:** | [Joël Mongeon](https://ca.linkedin.com/in/jo%C3%ABl-mongeon-393294195) |
+| **LinkedIn:** | [Joël Mongeon](https://www.linkedin.com/in/jo%C3%ABl-mongeon-393294195) |
 | **ResearchGate:** | [Joël Mongeon](https://www.researchgate.net/scientific-contributions/Joel-Mongeon-2294425778) |
 | **Academic Site:** | [jmongeon08.github.io](https://jmongeon08.github.io/) |
 
