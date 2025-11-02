@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Personal Website</title>
+    <title>Joël Mongeon - Personal Website</title>
     <style>
         * {
             margin: 0;
@@ -111,6 +111,28 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
+        /* Profile Image */
+        .profile-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #4a7c59;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            flex-shrink: 0;
+        }
+
+        .profile-text {
+            flex: 1;
+        }
+
         h1 {
             font-size: 2.5rem;
             color: #4a7c59;
@@ -189,6 +211,14 @@
             border-top: 3px solid #d97706;
         }
 
+        .project-image {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
         .insight-card {
             background-color: #f0f9f4;
             padding: 1.5rem;
@@ -198,6 +228,17 @@
         }
 
         @media (max-width: 768px) {
+            .profile-header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .profile-image {
+                width: 150px;
+                height: 150px;
+            }
+
             .sidebar {
                 position: fixed;
                 bottom: 0;
@@ -229,8 +270,8 @@
     <div class="sidebar">
         <a href="mailto:joel.mongeon@mail.mcgill.ca" title="Email">✉</a>
         <a href="https://www.linkedin.com/in/jo%C3%ABl-mongeon-393294195/" target="_blank" title="LinkedIn">in</a>
-        <a href="https://github.com/jmongeon08/jmongeon08.github.io" target="_blank" title="GitHub">⚙</a>
-        <a href="https://twitter.com/yourhandle" target="_blank" title="Twitter">🐦</a>
+        <a href="https://github.com/jmongeon08" target="_blank" title="GitHub">⚙</a>
+        <a href="https://www.researchgate.net/scientific-contributions/Joel-Mongeon-2294425778" target="_blank" title="ResearchGate">📄</a>
         <a href="https://scholar.google.com/yourprofile" target="_blank" title="Google Scholar">🎓</a>
     </div>
 
@@ -248,41 +289,48 @@
     <main>
         <!-- Home Section -->
         <section id="home" class="content-section active">
-            <h1>Hello, I'm Joël Mongeon</h1>
-            <p class="subtitle">PhD Student in Bioresource Engineering</p>
-            
-            <p>I'm a the Sustainable Agri-Food Systems Engineering Lab (SASEL) at McGill University. I work with <a href="#">Dr. Ebenezer Miezah Kwofie</a> in the <a href="#">Department of Bioresource Engineering</a>.</p>
-            
-            <p>My core research centers around supply chain optimization under network uncertainties in global and local value chains. I focus on developing computational and mathematical models to enhance the resilience, sustainability and efficiency of logistical systems.
-
-My research lies at the intersection between operations research, system dynamics, and machine learning, with a core focus on developing self-adaptive and robust decision-making models for sustainable and resilient value chains.
-I develop quantitative and computation models that integrate uncertainty, real-world constraints, and causal relationship. Some of my most recent models include the following:</p>
-            
-            <ul>
-                <li>Sustainability-Resilience Quantification: Leveraging graph theory and network analysis, hybrid LCA models to simultaneously model, compute and optimize the inherent sustainability-resilience trade-off of value chain operations across different value chain resilience stages. 1</li>
-                <li>Stochastic Modeling & System Dynamics: Employing probabilistic models (e.g., Bayesian Networks, Monte Carlo Sampling, and Agent-Based Modeling) within system dynamic models to simulate the cascading effects of disruptive events on value chains. 2</li>
-                <li>Prospective Network Topological Analysis: Utilizing hypergraph theory and geospatial analysis to assess the impact of radical value chain topological shifts (e.g., proectionist trade policies) on value chain performance and resource competition. 3</li>
-                <li> Value Chain Modeling and Optimization: Leveraging insights from neural networks, multiobjective optimization, and time-series models to simulate and optimize value chain operations across multiple dynamic real-world constraints and performance objectives. 4</li>
-                 <li> Adaptive Decision-Making:: Developing hybrid machine learning frameworks to create proactive sustainable and resilient adaptation in value chain models. 5</li>
-            </ul>
-            
-            <p>My work is motivated by the critical need to design intelligent, resilient and antifragile systems that can plan, adapt and reason under uncertainty to address various value chain challenges.</p>
-            
-            <div class="highlight">
-                <strong>🏆 Recent Achievement:</strong> [Describe a recent award, achievement, or milestone in your career]
+            <div class="profile-header">
+                <!-- REPLACE THIS with your actual image path -->
+                <img src="assets/images/profile.jpg" alt="Joël Mongeon" class="profile-image">
+                <div class="profile-text">
+                    <h1>Hello, I'm Joël Mongeon</h1>
+                    <p class="subtitle">PhD Student in Bioresource Engineering</p>
+                </div>
             </div>
             
-            <p>I was [describe a recent position/internship] at <a href="#">[Organization]</a> from [dates].</p>
+            <p>I'm at the <a href="https://www.mcgill.ca/bioeng/research/sasel" target="_blank">Sustainable Agri-Food Systems Engineering Lab (SASEL)</a> at McGill University. I work with <a href="https://www.mcgill.ca/bioeng/ebenezer-miezah-kwofie" target="_blank">Dr. Ebenezer Miezah Kwofie</a> in the <a href="https://www.mcgill.ca/bioeng/" target="_blank">Department of Bioresource Engineering</a>.</p>
+            
+            <p>My core research centers around <strong>supply chain optimization under network uncertainties</strong> in global and local value chains. I focus on developing computational and mathematical models to enhance the <strong>resilience, sustainability and efficiency</strong> of logistical systems.</p>
+
+            <p>My research lies at the intersection between <strong>operations research, system dynamics, and machine learning</strong>, with a core focus on developing self-adaptive and robust decision-making models for sustainable and resilient value chains.</p>
+            
+            <p>I develop quantitative and computation models that integrate <strong>uncertainty, real-world constraints, and causal relationships</strong>. Some of my most recent models include the following:</p>
+            
+            <ul>
+                <li><strong>Sustainability-Resilience Quantification:</strong> Leveraging graph theory and network analysis, hybrid LCA models to simultaneously model, compute and optimize the inherent sustainability-resilience trade-off of value chain operations across different value chain resilience stages.</li>
+                <li><strong>Stochastic Modeling & System Dynamics:</strong> Employing probabilistic models (e.g., Bayesian Networks, Monte Carlo Sampling, and Agent-Based Modeling) within system dynamic models to simulate the cascading effects of disruptive events on value chains.</li>
+                <li><strong>Prospective Network Topological Analysis:</strong> Utilizing hypergraph theory and geospatial analysis to assess the impact of radical value chain topological shifts (e.g., protectionist trade policies) on value chain performance and resource competition.</li>
+                <li><strong>Value Chain Modeling and Optimization:</strong> Leveraging insights from neural networks, multiobjective optimization, and time-series models to simulate and optimize value chain operations across multiple dynamic real-world constraints and performance objectives.</li>
+                <li><strong>Adaptive Decision-Making:</strong> Developing hybrid machine learning frameworks to create proactive sustainable and resilient adaptation in value chain models.</li>
+            </ul>
+            
+            <p>My work is motivated by the <strong>critical need to design intelligent, resilient and antifragile systems</strong> that can plan, adapt and reason under uncertainty to address various value chain challenges.</p>
+            
+            <div class="highlight">
+                <strong>🏆 Recent Achievements:</strong> Published 3 research papers in high-impact journals (Environmental Impact Assessment Review, International Journal of Life Cycle Assessment, Journal of Environmental Management) focusing on sustainability assessment and circular economy in Canadian agri-food systems.
+            </div>
             
             <h2>Research Interests</h2>
-            <p> Supply Chain Optimization & Logistics
-Stochastic and Robust Optimization
-System Dynamics & Complex Socio-Technical and Socio-Ecological Systems
-Graph Theory & Network Science
-Bayesian Networks & Causal Inference
-Evolutionary and Reinforcement Learning
-Life Cycle Assessment Refinement
-Multi-Criteria Decision Making</p>
+            <ul>
+                <li>Supply Chain Optimization & Logistics</li>
+                <li>Stochastic and Robust Optimization</li>
+                <li>System Dynamics & Complex Socio-Technical and Socio-Ecological Systems</li>
+                <li>Graph Theory & Network Science</li>
+                <li>Bayesian Networks & Causal Inference</li>
+                <li>Evolutionary and Reinforcement Learning</li>
+                <li>Life Cycle Assessment Refinement</li>
+                <li>Multi-Criteria Decision Making</li>
+            </ul>
         </section>
 
         <!-- Publications and Projects Section -->
@@ -292,44 +340,50 @@ Multi-Criteria Decision Making</p>
             <h2>Selected Publications</h2>
             
             <div class="publication-item">
-                <h3>Analysis of sustainability assessments to understand modeling trends and habits in the Agri-food industry: A Canadian case study 1</h3>
-                <p><strong>Authors:</strong> Joël Mongeon, Ebenezer M. Kwofie, Raphael Aidoo <strong>You</strong>, Author 3</p>
-                <p><strong>Journal/Conference:</strong> Environmental Impact Assessment Reviews, 2025</p>
+                <h3>Analysis of sustainability assessments to understand modeling trends and habits in the Agri-food industry: A Canadian case study</h3>
+                <p><strong>Authors:</strong> Joël Mongeon, Ebenezer M. Kwofie, Raphael Aidoo</p>
+                <p><strong>Journal/Conference:</strong> Environmental Impact Assessment Review, 2025</p>
                 <p>This paper comprehensively analyzes agri-food Life Cycle Assessments (LCA) in Canada, finding significant regional and institutional inconsistencies in LCA tool adoption, methodologies, and impact category selection, which limit the comparability and scalability of sustainability results. The study identifies key gaps, such as low LCA activity in major agricultural provinces like Saskatchewan, and argues for developing region-specific LCA impact assessment methods to address diverse environmental contexts. A SWOT framework is developed to propose actionable, stakeholder-specific strategies, emphasizing cooperation, knowledge-sharing platforms, and standardized protocols to foster harmonized LCA practices.</p>
-                <p><a href="#">[PDF]</a> | <a href="#">[Code]</a> | <a href="#">https://doi.org/10.1016/j.eiar.2025.107959</a></p>
+                <p><a href="https://doi.org/10.1016/j.eiar.2025.107959" target="_blank">[DOI]</a></p>
             </div>
             
             <div class="publication-item">
-                <h3> Mapping the landscape of life cycle sustainability assessments in Canadian agri-food systems: food commodity trends, gaps, and pathways to net-zero 2</h3>
-                <p><strong>Authors:</strong> <strong>Joël Mongeon</strong>, Ebenezer M. Kwofie, Raphael Aidoo, Joyce Selby</p>
+                <h3>Mapping the landscape of life cycle sustainability assessments in Canadian agri-food systems: food commodity trends, gaps, and pathways to net-zero</h3>
+                <p><strong>Authors:</strong> Joël Mongeon, Ebenezer M. Kwofie, Raphael Aidoo, Joyce Selby</p>
                 <p><strong>Journal/Conference:</strong> International Journal of Life Cycle Assessment, 2025</p>
                 <p>This paper analyzes 164 Life Cycle Sustainability Assessments (LCSAs)—including ELCA, LCC, TEA, and s-LCA—to evaluate the sustainability assessment landscape of the Canadian agri-food sector as it moves toward its net-zero 2050 target. The study finds that Environmental LCA (ELCA) dominates, with dairy, eggs, and corn being the most assessed commodities, and highlights a geographical disparity where major agricultural provinces like Saskatchewan lag in reporting compared to Alberta, Québec, and Ontario. Concluding that economic assessments are critically missing for many key food groups (grains, meats) and that temporal and spatial disparities—especially the lack of recent assessments post-2017 for grains—require increased collaboration and investment from governmental and academic stakeholders to improve the consistency and coverage of LCSA efforts.</p>
-                <p><a href="#">[PDF]</a> | <a href="#">[Code]</a></p>| <a href="#">DOI:10.1007/s11367-025-02489-w</a></p>
+                <p><a href="https://doi.org/10.1007/s11367-025-02489-w" target="_blank">[DOI]</a></p>
             </div>
 
-             <div class="publication-item">
-                <h3> Multi-criteria decision-analysis on the circularity and life cycle assessment direction in grains, cereals, crops, and pulses industry: A Canadian Case Study 2</h3>
-                <p><strong>Authors:</strong> <strong>Joël Mongeon</strong>, Ebenezer M. Kwofie, Raphael Aidoo, Joyce Selby</p>
+            <div class="publication-item">
+                <h3>Multi-criteria decision-analysis on the circularity and life cycle assessment direction in grains, cereals, crops, and pulses industry: A Canadian Case Study</h3>
+                <p><strong>Authors:</strong> Joël Mongeon, Ebenezer M. Kwofie, Raphael Aidoo, Joyce Selby</p>
                 <p><strong>Journal/Conference:</strong> Journal of Environmental Management, 2025</p>
-                <p> This paper conducts an extensive analysis of Life Cycle Assessments (LCAs) and circular economy (CE) solutions within the Canadian grains, crops, cereals, and pulses (GCCP) industry. The study identifies an over-representation of Environmental LCAs (ELCAs) and a gap in economic and social LCAs, noting that provinces like Saskatchewan and Ontario are underrepresented in assessments relative to their GCCP economic contribution. Using the CoCoSo Multi-Criteria Decision Analysis method, the research prioritized wheat, barley, and corn for future LCA efforts and found single-cell protein and corn bioethanol to be promising CE solutions, while also proposing specific LCA modeling priorities based on commodity and system gate.</p>
-                <p><a href="#">[PDF]</a> | <a href="#">[Code]</a></p>| <a href="#">DOI:10.1016/j.jenvman.2025.126227</a></p>
+                <p>This paper conducts an extensive analysis of Life Cycle Assessments (LCAs) and circular economy (CE) solutions within the Canadian grains, crops, cereals, and pulses (GCCP) industry. The study identifies an over-representation of Environmental LCAs (ELCAs) and a gap in economic and social LCAs, noting that provinces like Saskatchewan and Ontario are underrepresented in assessments relative to their GCCP economic contribution. Using the CoCoSo Multi-Criteria Decision Analysis method, the research prioritized wheat, barley, and corn for future LCA efforts and found single-cell protein and corn bioethanol to be promising CE solutions, while also proposing specific LCA modeling priorities based on commodity and system gate.</p>
+                <p><a href="https://doi.org/10.1016/j.jenvman.2025.126227" target="_blank">[DOI]</a></p>
             </div>
             
             <h2>Research Projects</h2>
             
             <div class="project-card">
-                <h3> FCI4Africa: Climate-neutral, fair, and just food system </h3>
+                <!-- REPLACE THIS with your actual project image path -->
+                <img src="assets/images/fci4africa.jpg" alt="FCI4Africa Project" class="project-image">
+                <h3>FCI4Africa: Climate-neutral, fair, and just food system</h3>
                 <p><strong>Duration:</strong> November 2024 - Present</p>
-                <p> The FCI4Africa initiative aims to create resilient, equitable, and nutritious food systems across Africa by focusing on key systemic improvements. Its core strategy centers on promoting open and equitable trade practices, harmonizing non-tariff measures that impede food trade, and advancing the digital transformation of food supply chains. A critical component of the initiative is fostering knowledge growth and dissemination through the creation of open-access scientific resources and digital platforms. Some collaborators include IITA, TechnoServe, Wageningen University, KNUST.</p>
+                <p>The <a href="https://www.wur.nl/en/research-results/research-institutes/food-biobased-research/show-fbr/fci4africa.htm" target="_blank">FCI4Africa initiative</a> aims to create resilient, equitable, and nutritious food systems across Africa by focusing on key systemic improvements. Its core strategy centers on promoting <strong>open and equitable trade practices</strong>, harmonizing non-tariff measures that impede food trade, and advancing the <strong>digital transformation of food supply chains</strong>. A critical component of the initiative is fostering knowledge growth and dissemination through the creation of open-access scientific resources and digital platforms. Collaborators include IITA, TechnoServe, Wageningen University, and KNUST.</p>
             </div>
             
             <div class="project-card">
-                <h3>Precision modeling and multidimensional sustainability optimization of industrial logistics and distribution chains </h3>
+                <!-- REPLACE THIS with your actual project image path -->
+                <img src="assets/images/logistics.jpg" alt="Logistics Optimization Project" class="project-image">
+                <h3>Precision modeling and multidimensional sustainability optimization of industrial logistics and distribution chains</h3>
                 <p><strong>Duration:</strong> September 2024 - September 2026</p>
-                <p>Perform a multidimensional sustainability assessment and eco-efficiency trade-off analysis of multiple logistic and distribution chains for selected agrifood industries
-Develop a sensor-based digital twin system for logistics and distribution route and inventory tracking 
-Develop an adaptable, interactive decision-support dashboard to support co-creation and real-time sustainability optimization of logistic and distribution chains
-</p>
+                <p><strong>Key objectives:</strong></p>
+                <ul>
+                    <li>Perform a <strong>multidimensional sustainability assessment</strong> and eco-efficiency trade-off analysis of multiple logistic and distribution chains for selected agrifood industries</li>
+                    <li>Develop a <strong>sensor-based digital twin system</strong> for logistics and distribution route and inventory tracking</li>
+                    <li>Develop an adaptable, interactive <strong>decision-support dashboard</strong> to support co-creation and real-time sustainability optimization of logistic and distribution chains</li>
+                </ul>
             </div>
         </section>
 
@@ -338,7 +392,7 @@ Develop an adaptable, interactive decision-support dashboard to support co-creat
             <h1>About Me</h1>
             
             <h2>Background</h2>
-            <p>Write about your educational background, how you got into your field, and what drives your research interests.</p>
+            <p>I am passionate about developing innovative solutions for sustainable supply chains and value chain resilience. My interdisciplinary approach combines engineering principles with data science and optimization to address complex challenges in agri-food systems.</p>
             
             <h2>Education</h2>
             <ul>
@@ -347,39 +401,68 @@ Develop an adaptable, interactive decision-support dashboard to support co-creat
                 <li><strong>BSc in Chemical Engineering</strong> - Laurentian University, 2018-2023</li>
             </ul>
             
-            <h2>Experience</h2>
+            <h2>Research Affiliations</h2>
             <ul>
-                <li><strong>Position Title</strong> - Organization, Dates</li>
-                <li><strong>Position Title</strong> - Organization, Dates</li>
-                <li><strong>Position Title</strong> - Organization, Dates</li>
+                <li><strong>Graduate Researcher</strong> - <a href="https://www.mcgill.ca/bioeng/research/sasel" target="_blank">Sustainable Agri-Food Systems Engineering Lab (SASEL)</a>, McGill University</li>
+                <li><strong>Collaborator</strong> - FCI4Africa Project, International Partnership</li>
             </ul>
             
             <h2>Beyond Research</h2>
-            <p>Share your interests outside of work, hobbies, or other activities you're passionate about.</p>
+            <p>When I'm not working on research, I enjoy exploring new technologies, reading about complex systems, and staying active. I'm particularly interested in how computational approaches can be applied to solve real-world sustainability challenges.</p>
         </section>
 
         <!-- Insights Section -->
         <section id="insights" class="content-section">
             <h1>Insights</h1>
-            <p class="subtitle">Thoughts on research, academia, and technology</p>
+            <p class="subtitle">Thoughts on research, academia, and sustainability</p>
+            
+            <!-- VISIBLE POSTS -->
+            <div class="insight-card">
+                <h3>The Importance of Interdisciplinary Approaches in Sustainability Research</h3>
+                <p><em>Date: January 2025</em></p>
+                <p>Working at the intersection of operations research, system dynamics, and machine learning has taught me that the most impactful solutions emerge when we break down traditional disciplinary boundaries. Complex challenges in agri-food systems require diverse perspectives and methodologies working in harmony.</p>
+            </div>
+            
+            <!-- 
+            ========================================
+            INCOGNITO POSTS (Hidden - Remove this comment block to make visible)
+            ========================================
             
             <div class="insight-card">
-                <h3>Insight Title 1</h3>
-                <p><em>Date: Month Year</em></p>
-                <p>Share your thoughts, lessons learned, or interesting observations from your research journey. This could be about methodologies, collaborations, work-life balance, or technical insights.</p>
+                <h3>Balancing Academic Rigor with Real-World Impact</h3>
+                <p><em>Date: December 2024</em></p>
+                <p>One of the greatest challenges in applied research is maintaining academic rigor while ensuring our work has tangible, real-world applications. Through projects like FCI4Africa, I've learned the importance of engaging with stakeholders early and often to ensure research addresses actual needs.</p>
             </div>
             
             <div class="insight-card">
-                <h3>Insight Title 2</h3>
-                <p><em>Date: Month Year</em></p>
-                <p>Another insight or reflection on your work, the field, or academic life. You can discuss challenges you've overcome, interesting findings, or advice for others.</p>
+                <h3>The Future of Supply Chain Resilience</h3>
+                <p><em>Date: November 2024</em></p>
+                <p>Recent global disruptions have highlighted the fragility of our supply chains. Moving forward, I believe the focus should shift from pure optimization to building antifragile systems that don't just withstand shocks but actually improve through adversity. This requires new modeling paradigms that embrace uncertainty rather than try to eliminate it.</p>
             </div>
             
+            -->
+            
+            <!-- 
+            ========================================
+            HOW TO ADD A NEW INSIGHT POST:
+            ========================================
+            
+            Copy and paste this template below (outside the comment block):
+            
             <div class="insight-card">
-                <h3>Insight Title 3</h3>
+                <h3>Your Insight Title Here</h3>
                 <p><em>Date: Month Year</em></p>
-                <p>Share more thoughts, perhaps about recent trends in your field, conferences you've attended, or books and papers that have influenced your thinking.</p>
+                <p>Your insight content goes here. Write about your thoughts, lessons learned, or observations from your research journey.</p>
             </div>
+            
+            To make a post INCOGNITO (hidden):
+            - Wrap it in a comment block like this example above
+            - Use left-arrow ! - - before the post and - - right-arrow after the post (without spaces)
+            
+            To PUBLISH an incognito post:
+            - Simply remove the comment markers around it
+            
+            -->
         </section>
     </main>
 
