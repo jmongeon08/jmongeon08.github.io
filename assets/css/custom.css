@@ -1,0 +1,154 @@
+/* Custom Green, Brown, Orange Color Scheme */
+/* Save this as: assets/css/custom.css */
+
+/* Override primary colors */
+:root {
+  --primary-green: #4a7c59;
+  --secondary-brown: #8b6914;
+  --accent-orange: #d97706;
+  --light-cream: #faf8f5;
+  --dark-text: #2d3319;
+}
+
+/* Main background */
+body {
+  background-color: var(--light-cream) !important;
+  color: var(--dark-text) !important;
+}
+
+/* Navigation bar */
+.masthead {
+  background-color: var(--primary-green) !important;
+}
+
+.masthead .site-title,
+.masthead .site-subtitle {
+  color: var(--light-cream) !important;
+}
+
+.greedy-nav a {
+  color: var(--light-cream) !important;
+}
+
+.greedy-nav a:hover {
+  background-color: var(--accent-orange) !important;
+  color: white !important;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: white !important;
+  border-right: 3px solid var(--primary-green) !important;
+}
+
+.author__name {
+  color: var(--primary-green) !important;
+}
+
+.author__bio {
+  color: var(--dark-text) !important;
+}
+
+/* Social icons in sidebar */
+.author__urls a {
+  color: var(--primary-green) !important;
+}
+
+.author__urls a:hover {
+  color: var(--accent-orange) !important;
+}
+
+/* Main content headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-green) !important;
+}
+
+h2 {
+  color: var(--secondary-brown) !important;
+  border-bottom: 2px solid var(--accent-orange) !important;
+  padding-bottom: 0.3em !important;
+}
+
+/* Links */
+a {
+  color: var(--accent-orange) !important;
+}
+
+a:hover {
+  color: var(--primary-green) !important;
+}
+
+/* Buttons */
+.btn,
+.page__footer-follow .social-icons a {
+  background-color: var(--primary-green) !important;
+  color: white !important;
+}
+
+.btn:hover,
+.page__footer-follow .social-icons a:hover {
+  background-color: var(--accent-orange) !important;
+}
+
+/* Archive items (publications, projects) */
+.archive__item {
+  background-color: white !important;
+  border-left: 4px solid var(--primary-green) !important;
+  padding: 1.5em !important;
+  margin-bottom: 1.5em !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05) !important;
+}
+
+.archive__item:hover {
+  border-left-color: var(--accent-orange) !important;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
+}
+
+.archive__item-title {
+  color: var(--primary-green) !important;
+}
+
+/* Highlights/Notices */
+.notice,
+.notice--info,
+.notice--warning {
+  background-color: #fef3c7 !important;
+  border-left: 4px solid var(--accent-orange) !important;
+}
+
+/* Page content */
+.page__content {
+  background-color: white !important;
+  padding: 2em !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05) !important;
+}
+
+/* Footer */
+.page__footer {
+  background-color: var(--primary-green) !important;
+  color: var(--light-cream) !important;
+}
+
+.page__footer a {
+  color: var(--light-cream) !important;
+}
+
+.page__footer a:hover {
+  color: var(--accent-orange) !important;
+}
+
+/* Taxonomy (tags) */
+.taxonomy__section {
+  border-bottom: 2px solid var(--primary-green) !important;
+}
+
+/* Pagination */
+.pagination--pager {
+  background-color: var(--primary-green) !important;
+  color: white !important;
+}
+
+.pagination--pager:hover {
+  background-color: var(--accent-orange) !important;
