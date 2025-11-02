@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Personal Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #2d3319;
+            background-color: #faf8f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 40px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            z-index: 100;
+        }
+
+        .sidebar a {
+            width: 45px;
+            height: 45px;
+            background-color: #4a7c59;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 20px;
+        }
+
+        .sidebar a:hover {
+            background-color: #d97706;
+            transform: scale(1.1);
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #4a7c59;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav a {
+            color: #faf8f5;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: #d97706;
+        }
+
+        /* Main Content */
+        main {
+            margin-left: 100px;
+            padding: 3rem 20px;
+            max-width: 800px;
+        }
+
+        .content-section {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #4a7c59;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #8b6914;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            color: #4a7c59;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: #6b7280;
+            margin-bottom: 2rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            color: #d97706;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #4a7c59;
+            text-decoration: underline;
+        }
+
+        ul {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight {
+            background-color: #fef3c7;
+            padding: 1rem;
+            border-left: 4px solid #d97706;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .publication-item {
+            background-color: white;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border-left: 4px solid #4a7c59;
+        }
+
+        .project-card {
+            background-color: white;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border-top: 3px solid #d97706;
+        }
+
+        .insight-card {
+            background-color: #f0f9f4;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #8b6914;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                top: auto;
+                transform: none;
+                flex-direction: row;
+                justify-content: center;
+                background-color: #4a7c59;
+                padding: 10px;
+                gap: 15px;
+            }
+
+            main {
+                margin-left: 0;
+                padding-bottom: 80px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar with contact links -->
+    <div class="sidebar">
+        <a href="mailto:your.email@example.com" title="Email">✉</a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank" title="LinkedIn">in</a>
+        <a href="https://github.com/yourusername" target="_blank" title="GitHub">⚙</a>
+        <a href="https://twitter.com/yourhandle" target="_blank" title="Twitter">🐦</a>
+        <a href="https://scholar.google.com/yourprofile" target="_blank" title="Google Scholar">🎓</a>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home" class="nav-link active" onclick="showSection('home')">Home</a></li>
+            <li><a href="#publications" class="nav-link" onclick="showSection('publications')">Publications and Projects</a></li>
+            <li><a href="#about" class="nav-link" onclick="showSection('about')">About Me</a></li>
+            <li><a href="#insights" class="nav-link" onclick="showSection('insights')">Insights</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="content-section active">
+            <h1>Hello, I'm [Your Name]</h1>
+            <p class="subtitle">Your Title and Affiliation</p>
+            
+            <p>I'm a [Your Position] at [Your Institution]. I work with <a href="#">[Supervisor/Collaborator Name]</a> in the <a href="#">[Department/Lab Name]</a>.</p>
+            
+            <p>My research focuses on [brief description of your research area]. I develop [describe your methods/approaches], including:</p>
+            
+            <ul>
+                <li>Research area or methodology 1</li>
+                <li>Research area or methodology 2</li>
+                <li>Research area or methodology 3</li>
+            </ul>
+            
+            <p>Motivated by [real-world applications], I use [your approach] to build [what you're building].</p>
+            
+            <div class="highlight">
+                <strong>🏆 Recent Achievement:</strong> [Describe a recent award, achievement, or milestone in your career]
+            </div>
+            
+            <p>I was [describe a recent position/internship] at <a href="#">[Organization]</a> from [dates].</p>
+            
+            <h2>Research Interests</h2>
+            <p>[List your main research interests and areas of expertise]</p>
+        </section>
+
+        <!-- Publications and Projects Section -->
+        <section id="publications" class="content-section">
+            <h1>Publications and Projects</h1>
+            
+            <h2>Selected Publications</h2>
+            
+            <div class="publication-item">
+                <h3>Publication Title 1</h3>
+                <p><strong>Authors:</strong> Author 1, Author 2, <strong>You</strong>, Author 3</p>
+                <p><strong>Journal/Conference:</strong> Name of Journal or Conference, Year</p>
+                <p>Brief description of the publication and its key contributions.</p>
+                <p><a href="#">[PDF]</a> | <a href="#">[Code]</a> | <a href="#">[DOI]</a></p>
+            </div>
+            
+            <div class="publication-item">
+                <h3>Publication Title 2</h3>
+                <p><strong>Authors:</strong> <strong>You</strong>, Author 2, Author 3</p>
+                <p><strong>Journal/Conference:</strong> Name of Journal or Conference, Year</p>
+                <p>Brief description of the publication and its key contributions.</p>
+                <p><a href="#">[PDF]</a> | <a href="#">[Code]</a></p>
+            </div>
+            
+            <h2>Research Projects</h2>
+            
+            <div class="project-card">
+                <h3>Project Name 1</h3>
+                <p><strong>Duration:</strong> Start Date - End Date (or Present)</p>
+                <p>Description of the project, its goals, methodologies, and outcomes. Include any collaborators or funding sources if relevant.</p>
+            </div>
+            
+            <div class="project-card">
+                <h3>Project Name 2</h3>
+                <p><strong>Duration:</strong> Start Date - End Date</p>
+                <p>Description of the project, its goals, methodologies, and outcomes.</p>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="content-section">
+            <h1>About Me</h1>
+            
+            <h2>Background</h2>
+            <p>Write about your educational background, how you got into your field, and what drives your research interests.</p>
+            
+            <h2>Education</h2>
+            <ul>
+                <li><strong>PhD in [Field]</strong> - [University], [Year - Present/Year]</li>
+                <li><strong>MSc in [Field]</strong> - [University], [Year]</li>
+                <li><strong>BSc in [Field]</strong> - [University], [Year]</li>
+            </ul>
+            
+            <h2>Experience</h2>
+            <ul>
+                <li><strong>Position Title</strong> - Organization, Dates</li>
+                <li><strong>Position Title</strong> - Organization, Dates</li>
+                <li><strong>Position Title</strong> - Organization, Dates</li>
+            </ul>
+            
+            <h2>Beyond Research</h2>
+            <p>Share your interests outside of work, hobbies, or other activities you're passionate about.</p>
+        </section>
+
+        <!-- Insights Section -->
+        <section id="insights" class="content-section">
+            <h1>Insights</h1>
+            <p class="subtitle">Thoughts on research, academia, and technology</p>
+            
+            <div class="insight-card">
+                <h3>Insight Title 1</h3>
+                <p><em>Date: Month Year</em></p>
+                <p>Share your thoughts, lessons learned, or interesting observations from your research journey. This could be about methodologies, collaborations, work-life balance, or technical insights.</p>
+            </div>
+            
+            <div class="insight-card">
+                <h3>Insight Title 2</h3>
+                <p><em>Date: Month Year</em></p>
+                <p>Another insight or reflection on your work, the field, or academic life. You can discuss challenges you've overcome, interesting findings, or advice for others.</p>
+            </div>
+            
+            <div class="insight-card">
+                <h3>Insight Title 3</h3>
+                <p><em>Date: Month Year</em></p>
+                <p>Share more thoughts, perhaps about recent trends in your field, conferences you've attended, or books and papers that have influenced your thinking.</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.content-section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            document.getElementById(sectionId).classList.add('active');
+            event.target.classList.add('active');
+            
+            window.history.pushState({}, '', `#${sectionId}`);
+        }
+        
+        window.addEventListener('load', () => {
+            const hash = window.location.hash.substring(1);
+            if (hash) {
+                showSection(hash);
+            }
+        });
+    </script>
+</body>
+</html>
