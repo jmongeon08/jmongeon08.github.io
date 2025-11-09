@@ -196,6 +196,7 @@
             border-radius: 4px;
         }
 
+        /* Publication Item Styling (Used by JS) */
         .publication-item {
             background-color: white;
             padding: 1.5rem;
@@ -222,6 +223,7 @@
             margin-bottom: 1rem;
         }
 
+        /* Insight Card Styling (Used by JS) */
         .insight-card {
             background-color: #f0f9f4;
             padding: 1.5rem;
@@ -337,29 +339,7 @@
                 
                 <h2>Selected Publications</h2>
                 
-                <div class="publication-item">
-                    <h3>Analysis of sustainability assessments to understand modeling trends and habits in the Agri-food industry: A Canadian case study</h3>
-                    <p><strong>Authors:</strong> Joël Mongeon, Ebenezer M. Kwofie, Raphael Aidoo</p>
-                    <p><strong>Journal/Conference:</strong> Environmental Impact Assessment Review, 2025</p>
-                    <p>This paper comprehensively analyzes agri-food Life Cycle Assessments (LCA) in Canada, finding significant regional and institutional inconsistencies in LCA tool adoption, methodologies, and impact category selection, which limit the comparability and scalability of sustainability results. The study identifies key gaps, such as low LCA activity in major agricultural provinces like Saskatchewan, and argues for developing region-specific LCA impact assessment methods to address diverse environmental contexts. A SWOT framework is developed to propose actionable, stakeholder-specific strategies, emphasizing cooperation, knowledge-sharing platforms, and standardized protocols to foster harmonized LCA practices.</p>
-                    <p><a href="https://doi.org/10.1016/j.eiar.2025.107959" target="_blank">[DOI]</a></p>
-                </div>
-                
-                <div class="publication-item">
-                    <h3>Mapping the landscape of life cycle sustainability assessments in Canadian agri-food systems: food commodity trends, gaps, and pathways to net-zero</h3>
-                    <p><strong>Authors:</strong> Joël Mongeon, Ebenezer M. Kwofie, Raphael Aidoo, Joyce Selby</p>
-                    <p><strong>Journal/Conference:</strong> International Journal of Life Cycle Assessment, 2025</p>
-                    <p>This paper analyzes 164 Life Cycle Sustainability Assessments (LCSAs)—including ELCA, LCC, TEA, and s-LCA—to evaluate the sustainability assessment landscape of the Canadian agri-food sector as it moves toward its net-zero 2050 target. The study finds that Environmental LCA (ELCA) dominates, with dairy, eggs, and corn being the most assessed commodities, and highlights a geographical disparity where major agricultural provinces like Saskatchewan lag in reporting compared to Alberta, Québec, and Ontario. Concluding that economic assessments are critically missing for many key food groups (grains, meats) and that temporal and spatial disparities—especially the lack of recent assessments post-2017 for grains—require increased collaboration and investment from governmental and academic stakeholders to improve the consistency and coverage of LCSA efforts.</p>
-                    <p><a href="https://doi.org/10.1007/s11367-025-02489-w" target="_blank">[DOI]</a></p>
-                </div>
-
-                <div class="publication-item">
-                    <h3>Multi-criteria decision-analysis on the circularity and life cycle assessment direction in grains, cereals, crops, and pulses industry: A Canadian Case Study</h3>
-                    <p><strong>Authors:</strong> Joël Mongeon, Ebenezer M. Kwofie, Raphael Aidoo, Joyce Selby</p>
-                    <p><strong>Journal/Conference:</strong> Journal of Environmental Management, 2025</p>
-                    <p>This paper conducts an extensive analysis of Life Cycle Assessments (LCAs) and circular economy (CE) solutions within the Canadian grains, crops, cereals, and pulses (GCCP) industry. The study identifies an over-representation of Environmental LCAs (ELCAs) and a gap in economic and social LCAs, noting that provinces like Saskatchewan and Ontario are underrepresented in assessments relative to their GCCP economic contribution. Using the CoCoSo Multi-Criteria Decision Analysis method, the research prioritized wheat, barley, and corn for future LCA efforts and found single-cell protein and corn bioethanol to be promising CE solutions, while also proposing specific LCA modeling priorities based on commodity and system gate.</p>
-                    <p><a href="https://doi.org/10.1016/j.jenvman.2025.126227" target="_blank">[DOI]</a></p>
-                </div>
+                <div id="publications-list-container"></div>
                 
                 <h2>Research Projects</h2>
                 
@@ -410,17 +390,99 @@
                 <h1>Insights</h1>
                 <p class="subtitle">Thoughts on research, academia, and sustainability</p>
                 
-                <div class="insight-card">
-                    <h3>The Importance of Interdisciplinary Approaches in Sustainability Research</h3>
-                    <p><em>Date: January 2025</em></p>
-                    <p>Working at the intersection of operations research, system dynamics, and machine learning has taught me that the most impactful solutions emerge when we break down traditional disciplinary boundaries. Complex challenges in agri-food systems require diverse perspectives and methodologies working in harmony.</p>
-                </div>
+                <div id="insights-list-container"></div>
                 
-                </section>
+            </section>
         </main>
     </div>
 
     <script>
+        // --- 📚 PUBLICATION DATA ---
+        // To add a new publication, add a new object to the top of this array.
+        const publicationsData = [
+            {
+                title: "Analysis of sustainability assessments to understand modeling trends and habits in the Agri-food industry: A Canadian case study",
+                authors: "Joël Mongeon, Ebenezer M. Kwofie, Raphael Aidoo",
+                journal: "Environmental Impact Assessment Review, 2025",
+                abstract: "This paper comprehensively analyzes agri-food Life Cycle Assessments (LCA) in Canada, finding significant regional and institutional inconsistencies in LCA tool adoption, methodologies, and impact category selection, which limit the comparability and scalability of sustainability results. The study identifies key gaps, such as low LCA activity in major agricultural provinces like Saskatchewan, and argues for developing region-specific LCA impact assessment methods to address diverse environmental contexts. A SWOT framework is developed to propose actionable, stakeholder-specific strategies, emphasizing cooperation, knowledge-sharing platforms, and standardized protocols to foster harmonized LCA practices.",
+                doi: "https://doi.org/10.1016/j.eiar.2025.107959"
+            },
+            {
+                title: "Mapping the landscape of life cycle sustainability assessments in Canadian agri-food systems: food commodity trends, gaps, and pathways to net-zero",
+                authors: "Joël Mongeon, Ebenezer M. Kwofie, Raphael Aidoo, Joyce Selby",
+                journal: "International Journal of Life Cycle Assessment, 2025",
+                abstract: "This paper analyzes 164 Life Cycle Sustainability Assessments (LCSAs)—including ELCA, LCC, TEA, and s-LCA—to evaluate the sustainability assessment landscape of the Canadian agri-food sector as it moves toward its net-zero 2050 target. The study finds that Environmental LCA (ELCA) dominates, with dairy, eggs, and corn being the most assessed commodities, and highlights a geographical disparity where major agricultural provinces like Saskatchewan lag in reporting compared to Alberta, Québec, and Ontario. Concluding that economic assessments are critically missing for many key food groups (grains, meats) and that temporal and spatial disparities—especially the lack of recent assessments post-2017 for grains—require increased collaboration and investment from governmental and academic stakeholders to improve the consistency and coverage of LCSA efforts.",
+                doi: "https://doi.org/10.1007/s11367-025-02489-w"
+            },
+            {
+                title: "Multi-criteria decision-analysis on the circularity and life cycle assessment direction in grains, cereals, crops, and pulses industry: A Canadian Case Study",
+                authors: "Joël Mongeon, Ebenezer M. Kwofie, Raphael Aidoo, Joyce Selby",
+                journal: "Journal of Environmental Management, 2025",
+                abstract: "This paper conducts an extensive analysis of Life Cycle Assessments (LCAs) and circular economy (CE) solutions within the Canadian grains, crops, cereals, and pulses (GCCP) industry. The study identifies an over-representation of Environmental LCAs (ELCAs) and a gap in economic and social LCAs, noting that provinces like Saskatchewan and Ontario are underrepresented in assessments relative to their GCCP economic contribution. Using the CoCoSo Multi-Criteria Decision Analysis method, the research prioritized wheat, barley, and corn for future LCA efforts and found single-cell protein and corn bioethanol to be promising CE solutions, while also proposing specific LCA modeling priorities based on commodity and system gate.",
+                doi: "https://doi.org/10.1016/j.jenvman.2025.126227"
+            }
+        ];
+
+        // --- ✨ INSIGHTS DATA ---
+        // To add a new insight, add a new object to the top of this array.
+        const insightsData = [
+            {
+                title: "The Importance of Interdisciplinary Approaches in Sustainability Research",
+                date: "January 2025",
+                content: "Working at the intersection of operations research, system dynamics, and machine learning has taught me that the most impactful solutions emerge when we break down traditional disciplinary boundaries. Complex challenges in agri-food systems require diverse perspectives and methodologies working in harmony.",
+                hidden: false // Set to true to hide the post
+            },
+            {
+                title: "Balancing Academic Rigor with Real-World Impact",
+                date: "December 2024",
+                content: "One of the greatest challenges in applied research is maintaining academic rigor while ensuring our work has tangible, real-world applications. Through projects like FCI4Africa, I've learned the importance of engaging with stakeholders early and often to ensure research addresses actual needs.",
+                hidden: true // This is hidden by default
+            },
+            {
+                title: "The Future of Supply Chain Resilience",
+                date: "November 2024",
+                content: "Recent global disruptions have highlighted the fragility of our supply chains. Moving forward, I believe the focus should shift from pure optimization to building antifragile systems that don't just withstand shocks but actually improve through adversity. This requires new modeling paradigms that embrace uncertainty rather than try to eliminate it.",
+                hidden: false
+            }
+        ];
+        
+        /** Renders the Publication list from the data array */
+        function renderPublications() {
+            const container = document.getElementById('publications-list-container');
+            if (!container) return;
+
+            let html = publicationsData.map(pub => `
+                <div class="publication-item">
+                    <h3>${pub.title}</h3>
+                    <p><strong>Authors:</strong> ${pub.authors}</p>
+                    <p><strong>Journal/Conference:</strong> ${pub.journal}</p>
+                    <p>${pub.abstract}</p>
+                    <p><a href="${pub.doi}" target="_blank">[DOI]</a></p>
+                </div>
+            `).join('');
+
+            container.innerHTML = html;
+        }
+
+        /** Renders the Insights list from the data array */
+        function renderInsights() {
+            const container = document.getElementById('insights-list-container');
+            if (!container) return;
+
+            let html = insightsData.filter(insight => !insight.hidden).map(insight => `
+                <div class="insight-card">
+                    <h3>${insight.title}</h3>
+                    <p><em>Date: ${insight.date}</em></p>
+                    <p>${insight.content}</p>
+                </div>
+            `).join('');
+
+            container.innerHTML = html;
+        }
+
+
+        // --- SECTION SWITCHING LOGIC (from previous fix) ---
+
         /**
          * Clears active states and sets the specified section/link to active.
          * @param {string} sectionId The ID of the section to show (e.g., 'home').
@@ -445,23 +507,23 @@
             }
 
             // 3. Activate the corresponding navigation link
-            if (triggerElement) {
-                // If triggered by a click, use the clicked element
-                triggerElement.classList.add('active');
-            } else {
+            let targetLink = triggerElement;
+            if (!targetLink) {
                 // If triggered by page load/hash, find the link manually
-                const targetLink = document.querySelector(`nav a[href="#${sectionId}"]`);
-                if (targetLink) {
-                    targetLink.classList.add('active');
-                }
+                targetLink = document.querySelector(`nav a[href="#${sectionId}"]`);
             }
-
-            // 4. Update URL hash (optional, done via event listeners)
-            // window.history.pushState({}, '', `#${sectionId}`); 
+            if (targetLink) {
+                targetLink.classList.add('active');
+            }
         }
 
-        // Event Listeners for Navigation Links (Modern approach to replace inline onclick)
+        // --- Initialization and Event Listeners ---
         document.addEventListener('DOMContentLoaded', () => {
+            // RENDER DYNAMIC CONTENT FIRST
+            renderPublications();
+            renderInsights();
+
+            // SETUP NAVIGATION EVENTS
             const navLinks = document.querySelectorAll('.nav-link');
             
             navLinks.forEach(link => {
