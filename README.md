@@ -2,12 +2,10 @@
 
 Hello! I'm Joël Mongeon, a PhD Researcher in the Department of Bioresource Engineering at McGill University, working in the **Sustainable Agrifood Systems Engineering Lab (SASEL) Lab**.
 
-My core research centers around **supply chain optimization under network uncertainties** in global and local value chains. I focus on developing computational and mathematical models to enhance the resilience, sustainability and efficiency of logistical systems. 
-
-My research lies at the intersection between operations research, system dynamics, and machine learning, with a core focus on developing self-adaptive and robust decision-making models for sustainable and resilient value chains. 
+My core research centers around **supply chain optimization under network uncertainties** in global and local value chains. I focus on developing computational and mathematical models to enhance the resilience, sustainability and efficiency of trade systems via complex emergent insights. My research lies at the intersection between operations research, system dynamics, machine learning, and complexity science with a core focus on developing self-adaptive and robust decision-making models for sustainable and resilient value chain design. 
 
 I develop quantitative and computation models that integrate uncertainty, real-world constraints, and causal relationship. Some of my most recent models that I am developing include the following:
-- **Sustainability-Resilience Quantification:** Leveraging graph theory and network analysis, hybrid LCA models to simultaneously model, compute and optimize the inherent sustainability-resilience trade-off of value chain operations across different value chain resilience stages. 
+- **Sustainability-Resilience Quantification:** Leveraging graph theory and network analysis, hybrid LCA models and Markov chains to simultaneously model, compute and optimize the inherent sustainability-resilience trade-off of value chain operations across different value chain resilience stages. 
 - **Stochastic Modeling & System Dynamics:** Employing probabilistic models (e.g., Bayesian Networks, Monte Carlo Sampling, and Agent-Based Modeling) within system dynamic models to simulate the cascading effects of disruptive events on value chains.
 - **Prospective Network Topological Analysis:** Utilizing hypergraph theory and geospatial analysis to assess the impact of radical value chain topological shifts (e.g., proectionist trade policies) on value chain performance and resource competition.
 - **Value Chain Modeling and Optimization:** Leveraging insights from neural networks, multiobjective optimization, and time-series models to simulate and optimize value chain operations across multiple dynamic real-world constraints and performance objectives.  
