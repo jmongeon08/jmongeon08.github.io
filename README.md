@@ -12,7 +12,9 @@ My core research centers around **supply chain optimization under network uncert
 - **Anticipatory Modeling & Complex Systems Theory:** Utilizing complex systems theory to model risk-averse transitions, integrating Fuzzy Cognitive Maps (FCM) and Causal Loop Mapping to develop anticipatory frameworks for systemic shifts.
 - **Advanced Decision Sciences & Creative Modeling:** Bridging non-compensatory decision-making with creative scenario-based modeling, such as Synthetic-MCDA and Game Theory Optimization, to simulate strategic interactions and human-centric choice behavior in complex environments.
 - **Physics-Based Graph Theory & Resilience Science:** Advancing the science of resilience through physics-derived principles, including Percolation Theory, p-Laplacian diffusion, and the application of superposition theory and hysteresis to model the structural integrity and recovery of supply chain networks.
+
 My work is motivated by the critical need to design intelligent, resilient and antifragile systems that can plan, adapt and reason under uncertainty to address various value chain challenges. 
+
 ---
 ## 💻 Research Interests
 - Supply Chain Optimization
